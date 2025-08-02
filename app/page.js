@@ -1,43 +1,95 @@
-// app/page.js
+import React from 'react';
 
 export default function Home() {
   return (
-    <>
-      <head>
-        <title>KAHUA｜記憶を揺らす一滴</title>
-        <meta name="description" content="KAHUAのアートは、記憶を揺らし、世界へ干渉する。思想が作品となり、あなたに触れるLP。" />
-        <meta name="keywords" content="KAHUA, アート, NFT, 観測アート, 干渉, 精神構造, 芸術" />
+    <section style={styles.hero}>
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={styles.video}
+      >
+        <source src="/main-visual.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div style={styles.content}>
+        <h1>世界の構造をデザインする、次世代クリエイターへ。</h1>
+        <p>感性に、技術を。魂に、創造を。<br />AI時代の新しいクリエイティブを、あなたに。</p>
+        <div style={styles.cta}>
+          <a href="#studio">🎬 AI映像制作</a>
+          <a href="#school">🎓 SELF-GEN講座</a>
+          <a href="#art">🎨 KAHUA ART</a>
+        </div>
+      </div>
+    </section>
+  </section>
 
-        {/* OGP設定 */}
-        <meta property="og:title" content="KAHUA｜記憶を揺らす一滴" />
-        <meta property="og:description" content="KAHUAのアートは、思想と干渉のための装置。記憶の一滴が、あなたの世界に届く。" />
-        <meta property="og:image" content="https://kahua.art/ogp.jpg" />
-        <meta property="og:url" content="https://seo.kahua.art" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </head>
+<style jsx>{`
+  section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
 
-      <main style={{ padding: '3rem', fontFamily: 'sans-serif' }}>
-        <h1 style={{ fontSize: '2rem' }}>記憶を揺らす、一滴。</h1>
-        <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginTop: '1rem' }}>
-          このページは、KAHUAが世界に届ける“思想アート”の入口。<br />
-          観る者の内面へ静かに干渉し、記憶に作用する作品群。<br />
-          あなたが開く、最初のゲートかもしれません。
-        </p>
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 
-        {/* CTAボタン */}
-        <a href="https://kahua.art" target="_blank" style={{
-          display: "inline-block",
-          padding: "12px 24px",
-          backgroundColor: "#000",
-          color: "#fff",
-          borderRadius: "6px",
-          textDecoration: "none",
-          marginTop: "2rem"
-        }}>
-          KAHUAの作品を見る
-        </a>
-      </main>
-    </>
-  )
+  .cta a {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+  }
+
+  .cta a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+  }
+`}</style>
+
+  );
 }
 
+const styles = {
+  hero: {
+    position: 'relative',
+    height: '100vh',
+    overflow: 'hidden',
+  },
+  video: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: -1,
+  },
+  content: {
+    position: 'relative',
+    zIndex: 2,
+    color: 'white',
+    textAlign: 'center',
+    top: '40%',
+    transform: 'translateY(-50%)',
+    padding: '1rem',
+  },
+  cta: {
+    marginTop: '2rem',
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '1rem',
+  },
+};
