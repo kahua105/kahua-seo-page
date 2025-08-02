@@ -63,35 +63,3 @@ export default function Home() {
     </section>
   );
 }
-
-const styles = {
-  hero: {
-    position: 'relative',
-    height: '100vh',
-    overflow: 'hidden',
-  },
-  video: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    zIndex: -1,
-  },
-  content: {
-    position: 'relative',
-    zIndex: 2,
-    color: 'white',
-    textAlign: 'center',
-    top: '40%',
-    transform: 'translateY(-50%)',
-    padding: '1rem',
-  },
-  cta: {
-    marginTop: '2rem',
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '1rem',
-  },
-};
