@@ -2,30 +2,32 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <section style={styles.hero}>
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        style={styles.video}
-      >
-        <source src="/main-visual.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div style={styles.content}>
-        <h1>世界の構造をデザインする、次世代クリエイターへ。</h1>
-        <p>
-          感性に、技術を。魂に、創造を。
-          <br />
-          AI時代の新しいクリエイティブを、あなたに。
-        </p>
-        <div style={styles.cta}>
-          <a href="#studio">🎬 AI映像制作</a>
-          <a href="#school">🎓 SELF-GEN講座</a>
-          <a href="#art">🎨 KAHUA ART</a>
+    <>
+      <section style={styles.hero}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={styles.video}
+        >
+          <source src="/main-visual.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div style={styles.content}>
+          <h1>世界の構造をデザインする、次世代クリエイターへ。</h1>
+          <p>
+            感性に、技術を。魂に、創造を。
+            <br />
+            AI時代の新しいクリエイティブを、あなたに。
+          </p>
+          <div style={styles.cta}>
+            <a href="#studio">🎬 AI映像制作</a>
+            <a href="#school">🎓 SELF-GEN講座</a>
+            <a href="#art">🎨 KAHUA ART</a>
+          </div>
         </div>
-      </div>
+      </section>
 
       <style jsx>{`
         section {
@@ -60,6 +62,17 @@ export default function Home() {
           transform: scale(1.05);
         }
       `}</style>
-    </section>
+    </>
   );
 }
+
+const styles = {
+  hero: {
+    position: 'relative',
+    height: '100vh',
+    overflow: 'hidden',
+  },
+  video: {
+    width: '100%',
+    height: '100%',
+    objectFit:
