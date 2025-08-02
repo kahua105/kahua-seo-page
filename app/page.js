@@ -22,9 +22,9 @@ export default function Home() {
             AI時代の新しいクリエイティブを、あなたに。
           </p>
           <div style={styles.cta}>
-            <a href="#studio">🎬 AI映像制作</a>
-            <a href="#school">🎓 SELF-GEN講座</a>
-            <a href="#art">🎨 KAHUA ART</a>
+<a href="#studio">&#127963; AI映像制作</a>
+     <a href="#school"><span>&#127891;</span> SELF-GEN講座</a>
+        <a href="#art">&#127800; KAHUA ART</a>
           </div>
         </div>
       </section>
